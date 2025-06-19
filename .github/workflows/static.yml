@@ -1,0 +1,215 @@
+<!-- =========================
+  GitHub Pages Portfolio Starter
+  Author: Your Name (replace)
+  Instructions:
+    1. Drop this file into the root of your <username>.github.io repo as index.html.
+    2. Replace the placeholder text, links, and iframe src values with your real content.
+    3. Create additional HTML files for each project (copy the template in the <!-- Project Page Template .
+    4. Optionally move the <style> block to /assets/css/style.css and adjust the <link>.
+    5. Commit & push; GitHub Pages will publish at https://<urtepuod>.github.io --> 
+================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name · Data Portfolio</title>
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f7f7f7;
+      --fg: #222222;
+      --accent: #2563eb; /* blue-600 */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+      z-index: 100;
+    }
+    nav a { margin-left: 1.25rem; font-weight: 600; }
+    .hero {
+      max-width: 760px;
+      margin: 6rem auto 4rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; margin: 0 0 1rem; }
+    .hero p { font-size: 1.125rem; margin: 0; }
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      transition: opacity 150ms ease;
+    }
+    .btn:hover { opacity: 0.85; }
+    section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .project-card h3 { margin: 0; }
+    iframe { width: 100%; border: none; min-height: 420px; border-radius: 0.75rem; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (min-width: 600px) {
+      .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Your&nbsp;Name</strong></div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Intro -->
+  <section class="hero">
+    <h1>Hi, I'm Urtė</h1>
+    <p>I am a PhD-trained data scientist with over three years’ experience in end-to-end analytics, including Python, SQL, machine learning and computer vision. I am experienced in building scalable, interpretable pipelines that transform unstructured scientific and market data into insights that shape revenue. I am passionate about GenAI, human behaviour analytics, and bridging the gap between research and commercial impact.</p>
+    <a href="#projects" class="btn">View&nbsp;Projects</a>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="project-card">
+      <h3>Customer Churn Analysis (Hex)</h3>
+      <p><em>SQL· Python · Hex</em></p>
+      <!-- Replace src with your public/signed Hex share link -->
+      <iframe src="https://app.hex.tech/0196cf75-8ee5-7004-babf-98c8c05e1b3f/hex/0196fe67-77f2-7005-98ad-f945de18b1d8/draft/logic"></iframe>
+      <p>
+        <strong>Problem:</strong> Sales leadership needed a scenario‑planning tool.<br />
+        <strong>Approach:</strong> Built time‑series model with Prophet and exposed key assumptions via Hex parameter UI.<br />
+        <strong>Result:</strong> Reduced monthly planning cycle time by 60%.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Feature Pricing Analysis (Jupyter)</h3>
+      <p><em>Pandas · Scikit‑learn · Matplotlib</em></p>
+      <!-- Export your notebook to HTML and link it here -->
+      <p><a href="/projects/churn-analysis.html" target="_blank">Open notebook ▶︎</a></p>
+      <p>
+        <strong>Problem:</strong> Identify at‑risk subscription customers.<br />
+        <strong>Approach:</strong> Exploratory data analysis and logistic regression model; feature importance via SHAP.<br />
+        <strong>Result:</strong> 33% lift in retention campaign ROI.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Auto-renew Dynamic (Hex) </h3>
+      <p><em>SQL· Python · Hex</em></p>
+      <!-- Replace src with your public/signed Hex share link -->
+      <iframe src="https://app.hex.tech/0196cf75-8ee5-7004-babf-98c8c05e1b3f/app/0196cf79-8f2f-7000-9584-5c636b6abf46/latest"></iframe>
+      <p>
+      <p>
+        <strong>Problem:</strong> Speed up common developer onboarding tasks.<br />
+        <strong>Approach:</strong> CLI scaffolds repo metadata, sets up CI workflows, and checks license compliance.<br />
+        <strong>Result:</strong> Cut new‑service spin‑up to &lt;10 minutes.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Brief bio goes here—2‑3 sentences on your background, passions, and current role. Mention any certifications, speaking gigs, or fun facts that make you memorable.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p><a href="https://www.linkedin.com/urtepuod" target="_blank">LinkedIn</a> </p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Urtė. Built with ❤️ and GitHub Pages.
+  </footer>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+<!-- =======================================================
+  Project Page Template (copy for each project)
+  Save as /projects/<slug>.html and adjust links.
+=======================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title · Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css"> <!-- if external css -->
+</head>
+<body>
+  <a href="/" style="margin:1rem; display:inline-block">← Back to portfolio</a>
+  <main style="max-width:720px; margin:0 auto; padding:1rem">
+    <h1>Project Title</h1>
+    <p><em>Tech stack – Date</em></p>
+
+    <!-- Replace with your content or embed -->
+    <iframe src="https://app.hex.tech/embed/REPLACE"></iframe>
+
+    <h2>Problem</h2>
+    <p>Describe the business or research problem.</p>
+    <h2>Approach</h2>
+    <p>Explain data sources, models, key decisions, and technical challenges.</p>
+    <h2>Results & Impact</h2>
+    <ul>
+      <li>Metric 1 ↑ 25%</li>
+      <li>Cycle time ↓ 60%</li>
+    </ul>
+    <h2>Lessons Learned</h2>
+    <p>Optional reflections, future work ideas, etc.</p>
+  </main>
+</body>
+</html>
+-->
+
+</body>
+</html>
